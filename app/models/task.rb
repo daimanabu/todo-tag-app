@@ -1,2 +1,4 @@
 class Task < ApplicationRecord
-end
+    has_many :labellings, dependent: :destroy
+    has_many :labels, through: :labellings
+  end
